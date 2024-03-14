@@ -1,0 +1,133 @@
+:root {
+  --button-bg: #0092ca;
+  --button-bg-hover: #00668f;
+  --text-primary: #f95959;
+  --text-primary-button: #eeeeee;
+  --box-bg: #393e46;
+  --box-bg-hover: #282c31;
+  --box-border: #0f1b21;
+}
+
+body {
+  background-color: #222831;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Top Text */
+.title {
+  color: whitesmoke;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+/* React Title */
+.title span {
+  color: var(--text-primary);
+  padding-left: 15px;
+}
+
+/* Winners Img */
+.title img {
+  padding: 0 20px;
+  height: 45px;
+}
+
+.title > h1 {
+  display: flex;
+  align-items: center;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Reset Button */
+.reset {
+  height: 55px;
+  width: 200px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background: var(--button-bg);
+  font-size: 1.4rem;
+  color: var(--text-primary-button);
+  margin-top: 25px;
+  margin-bottom: 50px;
+  transition: all 0.5s ease;
+}
+
+.reset:hover {
+  background: var(--button-bg-hover);
+}
+
+/* Main Board Screen */
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box */
+.boxes {
+  display: flex;
+  height: 120px;
+  width: 120px;
+  background: var(--box-bg);
+  border: 4px solid var(--box-border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.boxes:hover {
+  background: var(--box-bg-hover);
+}
+
+/* X O Icons */
+.boxes img {
+  margin: 30px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 432px) {
+  .container {
+    justify-content: space-evenly;
+    height: 100vh;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .title > h1 {
+    font-size: 1.5rem;
+  }
+
+  .title img {
+    padding: 0 20px;
+    height: 35px;
+  }
+
+  .boxes {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+/* Mobile Responsiveness X-small */
+@media screen and (max-width: 320px) {
+  .boxes {
+    height: 80px;
+    width: 80px;
+  }
+}
