@@ -63,12 +63,14 @@ const TicTacToe = () => {
     if (lock) {
       return;
     }
+
     let emptyIndices = [];
     for (let i = 0; i < data.length; i++) {
       if (data[i] === "") {
         emptyIndices.push(i);
       }
     }
+
     if (emptyIndices.length > 0) {
       const randomIndex = Math.floor(Math.random() * emptyIndices.length);
       const moveIndex = emptyIndices[randomIndex];
